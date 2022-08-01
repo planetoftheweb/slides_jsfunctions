@@ -1,7 +1,7 @@
 {
-  "name": "slides_tailwind3",
+  "name": "slides_jsevents",
   "description": "RayVeal.js, the markdown first slide framework based on the awesome reveal.js",
-  "repository": "http://github.com/planetoftheweb/slides_tailwind3",
+  "repository": "http://github.com/planetoftheweb/rayveal",
   "license": "MIT",
   "version": "2.0.0",
   "scripts": {
@@ -14,17 +14,16 @@
     "prod:serve": "ELEVENTY_ENV=production eleventy --output=./docs/site",
     "prod:copy": "copyfiles -u 2 ./src/slides/*.md ./docs/slides",
     "prod:copyJS": "copyfiles -u 2 /docs/site/slideList.json ./js/slideList.json",
-    "prod:vite": "vite build --outDir=../docs --base=/slides_tailwind3",
-    "prod:jekylloff": "touch docs/.nojekyll"
+    "prod:vite": "vite build --outDir=../docs --base=/slides_bootstrap5"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-navigation": "^0.1.6",
     "@11ty/eleventy-plugin-rss": "^1.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
     "animate.css": "^4.1.1",
-    "bootstrap": "^5.0.0-beta3",
-    "bootstrap-icons": "^1.3.0",
+    "bootstrap": "^5.2.0",
+    "bootstrap-icons": "^1.9.0",
     "copyfiles": "^2.4.1",
     "eleventy-plugin-nesting-toc": "^1.2.0",
     "eslint": "^7.20.0",
@@ -33,15 +32,15 @@
     "highlight.js": "^10.6.0",
     "markdown-it": "^12.0.4",
     "markdown-it-anchor": "^7.0.2",
-    "marked": "^2.0.0",
+    "marked": "^4.0.18",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.6",
     "postcss-cli": "^8.3.1",
     "prettier": "^2.2.1",
-    "reveal.js": "^4.1.0",
+    "reveal.js": "^4.3.1",
     "rimraf": "^3.0.2",
-    "sass": "^1.32.7",
-    "vite": "^2.0.0-beta.69",
+    "sass": "^1.5.3",
+    "vite": "^3.0.4",
     "webfontloader": "^1.6.28"
   }
 }
