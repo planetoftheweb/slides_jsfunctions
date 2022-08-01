@@ -735,7 +735,7 @@ footer.fadeout {
   position: absolute;
   left: 0;
   opacity: 1;
-  width: auto;
+  width: 30%;
   z-index: 450;
   animation-fill-mode: forwards;
 }
@@ -748,7 +748,7 @@ footer.fadeout {
 .sidebar-menu .menu-container {
   display: flex;
   justify-content: flex-start;
-  padding: 0.4em 1.2em;
+  padding: 0.4em 0.6em;
   border-bottom: 1px solid rgba(174, 4, 4, 0.2);
 }
 
@@ -773,6 +773,7 @@ footer.fadeout {
 
 .sidebar-menu .menu-container .menu-link {
   flex-grow: 4;
+  font-size: 1.3em;
   padding-left: 1.4em;
   font-weight: bold;
   line-height: normal;
