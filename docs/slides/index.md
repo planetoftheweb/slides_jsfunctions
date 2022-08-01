@@ -1,12 +1,14 @@
 <!-- .slide: data-state="layout-title no-fragment"  -->
 
-<div class="h1 mb-0" style="font-size: 3em">Tailwind CSS 3</div>
+# JavaScript
 
-Essential Training
+Functions
 
-<div class="btn btn-warning py-0 px-2 mt-2">raybo.org/slides_tailwind3</div>
+<div class="btn btn-warning mt-3 ">raybo.org/slides_jsfunctions</div>
 
-<p class="small mt-4"><span class="badge bg-light text-dark me-1 ms-2">&larr; &rarr;</span> navigate
-<span class="badge bg-light text-dark me-1 ms-2">t</span>toolbar
-<span class="badge bg-light text-dark me-1 ms-2">m</span>menu
-<span class="badge bg-light text-dark me-1 ms-2">esc</span>overview</p>
+<p class="small mt-5">
+  <span class="badge bg-dark me-1 ms-2">t</span> toolbar
+  <span class="badge bg-dark me-1 ms-2">m</span> menu
+  <span class="badge bg-dark me-1 ms-2">esc</span> overview
+  <span class="badge bg-dark me-1 ms-2"> &larr; &rarr;</span> navigate
+</p>
