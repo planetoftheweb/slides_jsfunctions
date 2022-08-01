@@ -1,0 +1,103 @@
+[{
+    "filename": "01_01",
+    "title": "Working with Tailwind CSS 3" }
+,{
+    "filename": "01_02",
+    "title": "Installation" }
+,{
+    "filename": "01_03",
+    "title": "Playground" }
+,{
+    "filename": "01_05",
+    "title": "CodeSwing" }
+,{
+    "filename": "02_02",
+    "title": "Utility First" }
+,{
+    "filename": "02_07",
+    "title": "Responsive Design" }
+,{
+    "filename": "02_08",
+    "title": "Arbitrary Sizing" }
+,{
+    "filename": "demo",
+    "title": "Opinionated Reveal.js" }
+,{
+    "filename": "slides",
+    "title": "" }
+,{
+    "filename": "01_04",
+    "title": "CDN" }
+,{
+    "filename": "02_03",
+    "title": "Tailwind Pitfalls" }
+,{
+    "filename": "03_01",
+    "title": "State Modifiers" }
+,{
+    "filename": "03_02",
+    "title": "Position Modifiers" }
+,{
+    "filename": "03_03",
+    "title": "Child/Syblings" }
+,{
+    "filename": "03_04",
+    "title": "Form Modifiers" }
+,{
+    "filename": "03_05",
+    "title": "Attribute Modifiers" }
+,{
+    "filename": "03_06",
+    "title": "Pseudo Elements" }
+,{
+    "filename": "03_07",
+    "title": "Media Modifiers" }
+,{
+    "filename": "03_08",
+    "title": "Dark Mode" }
+,{
+    "filename": "02_01",
+    "title": "Preflight" }
+,{
+    "filename": "02_04",
+    "title": "Tailwind Colors" }
+,{
+    "filename": "02_05",
+    "title": "Shortcut Classes" }
+,{
+    "filename": "02_06",
+    "title": "Special Classes" }
+,{
+    "filename": "04_01",
+    "title": "Configuration" }
+,{
+    "filename": "04_02",
+    "title": "Themes" }
+,{
+    "filename": "04_03",
+    "title": "Existing Scales" }
+,{
+    "filename": "05_01",
+    "title": "Official Plugins" }
+,{
+    "filename": "05_02",
+    "title": "Typography Plugin" }
+,{
+    "filename": "05_03",
+    "title": "Line Clamp Plugin" }
+,{
+    "filename": "00_01",
+    "title": "Why Utility First Frameworks Matter" }
+,{
+    "filename": "00_02",
+    "title": "Using the Exercises" }
+,{
+    "filename": "99_01",
+    "title": "Next Steps" }
+,{
+    "filename": "02_09",
+    "title": "Mixins Challenge" }
+,{
+    "filename": "03_09",
+    "title": "Dark Group Challenge" }
+]
