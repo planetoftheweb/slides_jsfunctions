@@ -45,7 +45,7 @@
         <main class="main col col-md-6 col-lg-8">
           <!-- .slide: data-state="layout-title" class="bg-dark"-->
 <h1 id="mechanics-of-functions" tabindex="-1">Mechanics of Functions <a class="direct-link" href="#mechanics-of-functions"> </a></h1>
-<div class="slide-link"><a href="https://go.raybo.org/2OXU"><i class="fab fa-slideshare"></i> go.raybo.org/2OXU</a></div>
+<div class="slide-link"><a href="https://go.raybo.org/9SaN"><i class="fab fa-slideshare"></i> go.raybo.org/9SaN</a></div>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
@@ -88,7 +88,7 @@ console.log(output)
 <p>You'll notice that I've started you out with some code already. Let's talk about what that's setting up before we get into our function.</p>
 <p>I've set up two sample ways to output our code.</p>
 <pre><code class="language-js">const $ = document.querySelector.bind(document)
-const output = 'HellO World'
+const output = 'Hello World'
 
 $('#output').innerHTML = output
 console.log(output)
@@ -102,7 +102,7 @@ console.log(output)
 <hr>
 <h1 id="writing-a-function" tabindex="-1">Writing a Function <a class="direct-link" href="#writing-a-function"> </a></h1>
 <pre><code class="language-js">function add(a, b) {
-  let c = a + b
+  const c = a + b
   return c
 }
 const output = add(2, 2)
@@ -112,23 +112,20 @@ const output = add(2, 2)
 </blockquote>
 <p>Let's use CodeSpaces to try this out.</p>
 <hr>
-<h1 id="variable-name-rules" tabindex="-1">Variable Name Rules <a class="direct-link" href="#variable-name-rules"> </a></h1>
+<h1 id="function-names" tabindex="-1">Function Names <a class="direct-link" href="#function-names"> </a></h1>
 <ul>
-<li>Uppercase or lowercase names</li>
-<li>Not a reserved word</li>
-<li>0-9, but can't begin with a number</li>
-<li><code>$</code> or <code>_</code> or other <a href="https://codepoints.net/search?IDS=1">Unicode Characters</a></li>
-<li>Check your <a href="https://go.raybo.org/9Lhh">variable name</a></li>
+<li>Case sensitive</li>
+<li>camelCase</li>
+<li>Descriptive verbs</li>
 </ul>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Before we keep going, let's talk a bit about the rules behind variable names.</p>
-<p>You can use uppercase or lowercase letters and type in most normal names.</p>
-<p>However, you can't use the names of any reserved words like (for, break, if, null, etc.)</p>
-<p>You can also use numbers, but you can't begin a variable name with a number.</p>
-<p>You can use the dollar sign as a variable as well as the underscore by themselves. In addition to that, you can use a number of <a href="https://codepoints.net/search?IDS=1">Unicode Characters</a>.</p>
-<p>There's a great website where you can type in your <a href="https://go.raybo.org/9Lhh">variable name</a> and it will tell you wether it's valid.</p>
+<p>A couple of suggestions for naming functions.</p>
+<p>First, be careful that variable names are case sensitive, so uppercase A in Add is differen than lowercase add</p>
+<p>Typically function names are written in camelCase, First letter lowercase if the name has another word, it's in uppercase</p>
+<p>Try to use descriptive verbs. I could have called my function addNumbers, but add is short enough.</p>
+<p>By the way writing the function is called declaring the function, and using the function is called invoking the function, but things get really interesting when we dive into how this works, so lets keep going.</p>
 
         </main>
         <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
@@ -149,7 +146,7 @@ const output = add(2, 2)
                     <li><a href="#writing-a-function">Writing a Function</a>
             		</li>
 
-                    <li><a href="#variable-name-rules">Variable Name Rules</a>
+                    <li><a href="#function-names">Function Names</a>
             		</li>
                 </ol>
             </div>
