@@ -729,13 +729,14 @@ footer.fadeout {
 
 .sidebar-menu {
   background: rgb(240, 192, 81);
-  font-size: 0.6em;
+  font-size: 0.7em;
   height: 100vh;
   overflow-y: auto;
   position: absolute;
   left: 0;
   opacity: 1;
-  width: 30%;
+  width: auto;
+  min-width: 15%;
   z-index: 450;
   animation-fill-mode: forwards;
 }
@@ -748,7 +749,7 @@ footer.fadeout {
 .sidebar-menu .menu-container {
   display: flex;
   justify-content: flex-start;
-  padding: 0.4em 0.6em;
+  padding: 0.4em 1em;
   border-bottom: 1px solid rgba(174, 4, 4, 0.2);
 }
 
@@ -774,7 +775,7 @@ footer.fadeout {
 .sidebar-menu .menu-container .menu-link {
   flex-grow: 4;
   font-size: 1.3em;
-  padding-left: 1.4em;
+  padding-left: 1.8em;
   font-weight: bold;
   line-height: normal;
   display: inline-block;
@@ -786,7 +787,7 @@ footer.fadeout {
 
 .sidebar-menu .menu-container .menu-notes {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='RGBA(87, 53, 7, .65)' class='bi bi-file-text-fill' viewBox='0 0 16 16'><path d='M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z'/></svg>");
-  padding-right: 1.4em;
+  padding-right: 1.8em;
   background-repeat: no-repeat;
   background-position-x: right;
   line-height: normal;
