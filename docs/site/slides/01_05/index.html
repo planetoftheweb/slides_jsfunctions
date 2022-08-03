@@ -63,7 +63,7 @@
         <main class="main col col-md-6 col-lg-8">
           <!-- .slide: data-state="layout-title" class="bg-dark"-->
 <h1 id="hoisting-and-scope" tabindex="-1">Hoisting and Scope <a class="direct-link" href="#hoisting-and-scope"> </a></h1>
-<div class="slide-link"><a href="https://go.raybo.org/9VUq"><i class="fab fa-slideshare"></i> go.raybo.org/9VUq</a></div>
+<div class="slide-link"><a href="https://go.raybo.org/9Wie"><i class="fab fa-slideshare"></i> go.raybo.org/9Wie</a></div>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
@@ -83,22 +83,22 @@
 <p>As we'll see soon, functions also have scope.</p>
 <hr>
 <h1 id="var-global-scope" tabindex="-1">Var Global Scope <a class="direct-link" href="#var-global-scope"> </a></h1>
-<pre><code>var medicine;
+<pre><code class="language-js">var medicine;
 function doExperiment() {
     medicine = &quot;cough syrup&quot;;
-    console.log(medicine);
+    console.log(medicine); // cough syrup
 }
 </code></pre>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Although I said that you shouldn't be using var, you're probably going to run into some code that uses it. Also, if you don't use Let or Const, this is the way JavaScript will declare variables like this.</p>
+<p>Although I said that you shouldn't be using var, you're probably going to run into some code that uses it. Also, if you don't use Let or Const, this is the way JavaScript will declare variables by default.</p>
 <hr>
 <h1 id="var-function-scope" tabindex="-1">Var Function Scope <a class="direct-link" href="#var-function-scope"> </a></h1>
-<pre><code>function doExperiment() {
+<pre><code class="language-js">function doExperiment() {
     var medicine = &quot;cough syrup&quot;;
-    console.log(medicine);
-}
+    console.log(medicine); // cough syrup
+    }
 </code></pre>
 <blockquote>
 <blockquote></blockquote>
@@ -106,22 +106,22 @@ function doExperiment() {
 <p>Variables declared with the var keyword will also have function scope if they are declared inside a function.</p>
 <hr>
 <h1 id="block-scope" tabindex="-1">Block Scope <a class="direct-link" href="#block-scope"> </a></h1>
-<pre><code>function doExperiment() {
+<pre><code class="language-js">function doExperiment() {
     let medicine = &quot;cough syrup&quot;;
     if (medicine != 'aspirin') {
         const message = 'not aspirin'
-        console.log(message)
+        console.log(message) // not aspirin
     }
-    console.log(medicine);
+    console.log(medicine); // cough syrup
 }
 </code></pre>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Variables declared with the let or const keyword have block scope, so their value holds within the curly braces. That's both inside functions andd also inside if, switch, or and while statements.</p>
+<p>Variables declared with the let or const keyword have block scope, so their value holds within the curly braces. That's both inside functions and also inside if, switch, or and while statements.</p>
 <hr>
 <h1 id="hoisting" tabindex="-1">Hoisting <a class="direct-link" href="#hoisting"> </a></h1>
-<pre><code>var temp = 86
+<pre><code class="language-js">var temp = 86
 tempC()
 console.log(temp) // 86
 
@@ -140,6 +140,7 @@ function tempC() {
 <p>JavaScript is a compiled language, so there's an extra step that happens when you run your code. It gets analyzed and rewritten by a compiler. One of the byproducts is called hoisting.</p>
 <p>With hoisting, variable and function declarations are moved to the top of their scope.</p>
 <p>This is something you have to see to believe, so lets go to codespaces and give it a try.</p>
+<p>Hoisting and Scope are two things you need to be aware of, specially if you're working on some legacy code.</p>
 
         </main>
         <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
