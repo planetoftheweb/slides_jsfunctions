@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=asap:wght@400;700&family=roboto+slab:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-subdued">
+    <div class="post post-sidebar container-fluid">
+      <div class="row justify-content-md-center">
+
+        <aside class="bg-dark bg-gradient min-vh-100  aside aside-main col col-md-3 col-lg-2 gx-0" style="--bs-bg-opacity: .3;">
+            <nav class="sticky-top fw-medium lh-sm pt-2 ">
+              <h3 class="text-secondary ms-2">All Docs</h3>
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 " style="--bs-bg-opacity: .5;">
+                    <a class="text-decoration-none link-dark " href="../01_01/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-secondary "></i>
+                      01_01</a>
+                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_01&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 " style="--bs-bg-opacity: .5;">
+                    <a class="text-decoration-none link-dark " href="../01_02/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-secondary "></i>
+                      01_02</a>
+                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_02&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 " style="--bs-bg-opacity: .5;">
+                    <a class="text-decoration-none link-dark " href="../01_03/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-secondary "></i>
+                      01_03</a>
+                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_03&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 " style="--bs-bg-opacity: .5;">
+                    <a class="text-decoration-none link-dark " href="../01_04/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-secondary "></i>
+                      01_04</a>
+                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_04&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-dark " style="--bs-bg-opacity: .5;">
+                    <a class="text-decoration-none link-dark  text-light link-light " href="../01_05/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-light "></i>
+                      01_05</a>
+                    <a class=" link-light  flex-fill ms-3 text-end" href="../../../?d=01_05&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
+                </nav>
+          </aside>
+        <main class="main col col-md-6 col-lg-8">
+          <!-- .slide: data-state="layout-title" class="bg-dark"-->
+<h1 id="hoisting-and-scope" tabindex="-1">Hoisting and Scope <a class="direct-link" href="#hoisting-and-scope"> </a></h1>
+<div class="slide-link"><a href="https://go.raybo.org/9VUq"><i class="fab fa-slideshare"></i> go.raybo.org/9VUq</a></div>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>We need to talk about one of the more...interesting parts of <a href="http://JavaScript.It">JavaScript.It</a> has to do with scope...so, let's take a look at how that works with functions.</p>
+<hr>
+<h1 id="scope" tabindex="-1">Scope <a class="direct-link" href="#scope"> </a></h1>
+<ul>
+<li><a href="https://go.raybo.org/9W7M">Variable availability</a></li>
+<li><code>var</code>, <code>let</code> and <code>const</code></li>
+<li>Also functions</li>
+</ul>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>This is going to require a good understanding of how variables work, so if you want a great, fun explanation, make sure you watch this video in my course called JavaScript as a Second Language.</p>
+<p>Most of the time Scope refers to where a variable is available once it's been declared and I'm talking about the how variable declarations can be done with var, let and const. Watch the video from JavaScript as a Second language, but basically...never use var.</p>
+<p>As we'll see soon, functions also have scope.</p>
+<hr>
+<h1 id="var-global-scope" tabindex="-1">Var Global Scope <a class="direct-link" href="#var-global-scope"> </a></h1>
+<pre><code>var medicine;
+function doExperiment() {
+    medicine = &quot;cough syrup&quot;;
+    console.log(medicine);
+}
+</code></pre>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Although I said that you shouldn't be using var, you're probably going to run into some code that uses it. Also, if you don't use Let or Const, this is the way JavaScript will declare variables like this.</p>
+<hr>
+<h1 id="var-function-scope" tabindex="-1">Var Function Scope <a class="direct-link" href="#var-function-scope"> </a></h1>
+<pre><code>function doExperiment() {
+    var medicine = &quot;cough syrup&quot;;
+    console.log(medicine);
+}
+</code></pre>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Variables declared with the var keyword will also have function scope if they are declared inside a function.</p>
+<hr>
+<h1 id="block-scope" tabindex="-1">Block Scope <a class="direct-link" href="#block-scope"> </a></h1>
+<pre><code>function doExperiment() {
+    let medicine = &quot;cough syrup&quot;;
+    if (medicine != 'aspirin') {
+        const message = 'not aspirin'
+        console.log(message)
+    }
+    console.log(medicine);
+}
+</code></pre>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Variables declared with the let or const keyword have block scope, so their value holds within the curly braces. That's both inside functions andd also inside if, switch, or and while statements.</p>
+<hr>
+<h1 id="hoisting" tabindex="-1">Hoisting <a class="direct-link" href="#hoisting"> </a></h1>
+<pre><code>var temp = 86
+tempC()
+console.log(temp) // 86
+
+function tempC() {
+    console.log(temp) // undefined
+    var temp = 50
+    temp = (temp - 32)
+    console.log(temp) // 10
+}
+
+</code></pre>
+<p><a href="https://github.dev/LinkedInLearning/javascript-functions-2502735/tree/01_05b" target="_blank"><code class="code-royal">Try it</code></a></p>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>JavaScript is a compiled language, so there's an extra step that happens when you run your code. It gets analyzed and rewritten by a compiler. One of the byproducts is called hoisting.</p>
+<p>With hoisting, variable and function declarations are moved to the top of their scope.</p>
+<p>This is something you have to see to believe, so lets go to codespaces and give it a try.</p>
+
+        </main>
+        <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
+          <nav class="sticky-top">
+            <h3 class="pt-2">This Slide</h3>
+            <div class="">
+                <ol>
+                    
+                    <li><a href="#hoisting-and-scope">Hoisting and Scope</a>
+            		</li>
+
+                    <li><a href="#scope">Scope</a>
+            		</li>
+
+                    <li><a href="#var-global-scope">Var Global Scope</a>
+            		</li>
+
+                    <li><a href="#var-function-scope">Var Function Scope</a>
+            		</li>
+
+                    <li><a href="#block-scope">Block Scope</a>
+            		</li>
+
+                    <li><a href="#hoisting">Hoisting</a>
+            		</li>
+                </ol>
+            </div>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
+    <script defer="defer" src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
