@@ -58,6 +58,33 @@
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 " style="--bs-bg-opacity: .5;">
+                    <a class="text-decoration-none link-dark " href="../01_06/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-secondary "></i>
+                      01_06</a>
+                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_06&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 " style="--bs-bg-opacity: .5;">
+                    <a class="text-decoration-none link-dark " href="../01_07/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-secondary "></i>
+                      01_07</a>
+                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_07&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 " style="--bs-bg-opacity: .5;">
+                    <a class="text-decoration-none link-dark " href="../01_08/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-secondary "></i>
+                      01_08</a>
+                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_08&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
                 </nav>
           </aside>
         <main class="main col col-md-6 col-lg-8">
@@ -98,7 +125,7 @@ function doExperiment() {
 <pre><code class="language-js">function doExperiment() {
     var medicine = &quot;cough syrup&quot;;
     console.log(medicine); // cough syrup
-    }
+}
 </code></pre>
 <blockquote>
 <blockquote></blockquote>
@@ -106,19 +133,26 @@ function doExperiment() {
 <p>Variables declared with the var keyword will also have function scope if they are declared inside a function.</p>
 <hr>
 <h1 id="block-scope" tabindex="-1">Block Scope <a class="direct-link" href="#block-scope"> </a></h1>
-<pre><code class="language-js">function doExperiment() {
+<pre><code class="language-js">let medicine = &quot;aspirin&quot;
+function doExperiment() {
     let medicine = &quot;cough syrup&quot;;
     if (medicine != 'aspirin') {
-        const message = 'not aspirin'
-        console.log(message) // not aspirin
+        const medicine = 'not aspirin'
+        console.log(medicine) // not aspirin
     }
     console.log(medicine); // cough syrup
 }
+doExperiment();
+console.log(medicine); // aspirin
 </code></pre>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
 <p>Variables declared with the let or const keyword have block scope, so their value holds within the curly braces. That's both inside functions and also inside if, switch, or and while statements.</p>
+<pre><code>not aspirin
+cough syrup
+aspirin
+</code></pre>
 <hr>
 <h1 id="hoisting" tabindex="-1">Hoisting <a class="direct-link" href="#hoisting"> </a></h1>
 <pre><code class="language-js">var temp = 86
@@ -126,19 +160,19 @@ tempC()
 console.log(temp) // 86
 
 function tempC() {
+    var temp;
     console.log(temp) // undefined
     var temp = 50
-    temp = (temp - 32)
+    temp = (temp - 32) / 1.8
     console.log(temp) // 10
 }
-
 </code></pre>
 <p><a href="https://github.dev/LinkedInLearning/javascript-functions-2502735/tree/01_05b" target="_blank"><code class="code-royal">Try it</code></a></p>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>JavaScript is a compiled language, so there's an extra step that happens when you run your code. It gets analyzed and rewritten by a compiler. One of the byproducts is called hoisting.</p>
-<p>With hoisting, variable and function declarations are moved to the top of their scope.</p>
+<p>JavaScript is a compiled language, so there's an extra step that happens when you run your code. It gets analyzed and rewritten by a compiler. One of the byproducts of that is called hoisting.</p>
+<p>Variable and function declarations are moved to the top of their scope.</p>
 <p>This is something you have to see to believe, so lets go to codespaces and give it a try.</p>
 <p>Hoisting and Scope are two things you need to be aware of, specially if you're working on some legacy code.</p>
 
