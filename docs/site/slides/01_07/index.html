@@ -85,26 +85,135 @@
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 " style="--bs-bg-opacity: .5;">
+                    <a class="text-decoration-none link-dark " href="../01_09/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-secondary "></i>
+                      01_09</a>
+                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_09&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
                 </nav>
           </aside>
         <main class="main col col-md-6 col-lg-8">
           <!-- .slide: data-state="layout-title" class="bg-dark"-->
-<h1 id="challenge" tabindex="-1">Challenge <a class="direct-link" href="#challenge"> </a></h1>
-<hr>
-<!-- .slide: data-state="layout-title" class="bg-dark"-->
-<h1 id="challenge-1" tabindex="-1">Challenge <a class="direct-link" href="#challenge-1"> </a></h1>
-<ol>
-<li>Given previous object</li>
-<li>Standalone function</li>
-<li>Object as input</li>
-<li>key/value list</li>
-<li>Insert into DOM</li>
-</ol>
-<p><a href="https://github.dev/LinkedInLearning/javascript-functions-2502735/tree/01_07" target="_blank"><code class="code-royal">Try It</code></a></p>
+<h1 id="methods" tabindex="-1">Methods <a class="direct-link" href="#methods"> </a></h1>
+<div class="slide-link"><a href="https://go.raybo.org/9Xxu"><i class="fab fa-slideshare"></i> go.raybo.org/9Xxu</a></div>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Create function that takes an object as an input and creates a list in the DOM out of the Object's key/value pairs.</p>
+<p>Sometimes things that seem insignificant can be quite powerful...case in point, I bring you the return statement.</p>
+<hr>
+<h1 id="return" tabindex="-1">Return <a class="direct-link" href="#return"> </a></h1>
+<pre><code class="language-js">function add(a, b) {
+  return a+b
+}
+console.log(add(2,2)) //4
+</code></pre>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Whenever you invoke a function, it's a bit like generating an equation. And equations have results. So, the basic job of the return statement is to return the result of the execution of the function.</p>
+<hr>
+<h1 id="expressions" tabindex="-1">Expressions <a class="direct-link" href="#expressions"> </a></h1>
+<pre><code class="language-js">function add(a, b) {
+  return console.log('Success'),
+    a+b
+}
+console.log(add(2,2))// Success
+// 4
+</code></pre>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Expressions in JavaScript are pretty important. They're valid units of code that resolve to a value.</p>
+<p>Here, we're using a comma to output a Success statement and then a return the value of a+b. The comma operator is interesting in that it will evaluate each of the operands and then return the value of the last operand.</p>
+<p>So I'm just basically returning the value of the addition.</p>
+<hr>
+<h1 id="return-quirks" tabindex="-1">Return Quirks <a class="direct-link" href="#return-quirks"> </a></h1>
+<pre><code class="language-js">function add(a, b) {
+  return
+    console.log('Success'),
+    a+b
+}
+console.log(add(2,2))// Success
+// 4
+</code></pre>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Let's say, I want to use the same code as before, but I want to make it look nicer so I add a carriage return.</p>
+<p>Another quirk of javascript is that it assumes that every line of code is a statement. The compiler will add a semicolon at the end of a line if it's not there</p>
+<p>So, when the compiler re-writes this, there will be a semicolon at the end of the return statement.</p>
+<p>One of the by-products of the return statement is that it also stops the execution of the rest of the function, so the lines won't execute.</p>
+<hr>
+<h1 id="return-quirks-1" tabindex="-1">Return Quirks <a class="direct-link" href="#return-quirks-1"> </a></h1>
+<pre><code class="language-js">function add(a, b) {
+  return (
+    console.log('Success'),
+    a+b
+  )
+}
+console.log(add(2,2))// Success
+// 4
+</code></pre>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>To fix something like this, you'll often see a set of parenthesis added to return statements to prevent auto semicolon insertion from causing a problem.</p>
+<hr>
+<h1 id="multiple-returns" tabindex="-1">Multiple Returns <a class="direct-link" href="#multiple-returns"> </a></h1>
+<pre><code class="language-js">function add(a, b) {
+ if (a&gt;b) { return a+b }
+ else { return a-b }
+}
+console.log(add(2,3))// -1
+console.log(add(3,2))// 5
+</code></pre>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>You can have more than one return statement in a function so in this conditional statement, the operation will depend on the value of a and b.</p>
+<p>The function will return -1 and then 5.</p>
+<hr>
+<h1 id="multiple-returns-1" tabindex="-1">Multiple Returns <a class="direct-link" href="#multiple-returns-1"> </a></h1>
+<pre><code class="language-js">function add(a, b) {
+  console.log(a + b)
+}
+console.log(add(2,3))
+// 5
+// undefined
+</code></pre>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>If you don't use a return statement, the function still returns something...in this case a value of undefined.</p>
+<p>Since we're putting the function in a console.log statement, that statement would output undefined.</p>
+<hr>
+<h1 id="returning-functions" tabindex="-1">Returning Functions <a class="direct-link" href="#returning-functions"> </a></h1>
+<pre><code class="language-js">function counter() {
+  let number = 1
+  return function() { console.log(number++) }
+}
+let steps = counter();
+steps() // 1
+steps() // 2
+</code></pre>
+<p><a href="https://github.dev/LinkedInLearning/javascript-functions-2502735/tree/01_07b" target="_blank"><code class="code-royal">Try it</code></a></p>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>This might sound weird, but since functions return a value, they can return other functions. This is somewhat common and useful for a number of patterns.</p>
+<p>For example here, I'm creating a function that keeps track of a number. Each time I call this function, it's going to add one to the current count.</p>
+<p>This sort of looks weird, but somethign really cool is happening that I hope you can see.</p>
+<p>We initialize the steps variable so that it can basically act as the function.</p>
+<p>When it first executes, it initializes the number to 1 and then the return function logs the number to the console.</p>
+<p>The interesting bit is the ++ operator. That increases the value of a variable by one...and this is key AFTER whatever is happening.</p>
+<p>When it executes again, you might think that the value of number gets reset to 1, but that's not the case.</p>
+<p>The function being returned actually changes the value of number, so the second time it runs, the copy that's in the steps variable has a value of 2, so it outputs that.</p>
+<p>Every time you call it the value of the number will increase.</p>
+<p>The ability of a function inside a function to affect the value of a parent like this is called a closure and it's an extremely powerful programming pattern.</p>
 
         </main>
         <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
@@ -113,10 +222,28 @@
             <div class="">
                 <ol>
                     
-                    <li><a href="#challenge">Challenge</a>
+                    <li><a href="#methods">Methods</a>
             		</li>
 
-                    <li><a href="#challenge-1">Challenge</a>
+                    <li><a href="#return">Return</a>
+            		</li>
+
+                    <li><a href="#expressions">Expressions</a>
+            		</li>
+
+                    <li><a href="#return-quirks">Return Quirks</a>
+            		</li>
+
+                    <li><a href="#return-quirks-1">Return Quirks</a>
+            		</li>
+
+                    <li><a href="#multiple-returns">Multiple Returns</a>
+            		</li>
+
+                    <li><a href="#multiple-returns-1">Multiple Returns</a>
+            		</li>
+
+                    <li><a href="#returning-functions">Returning Functions</a>
             		</li>
                 </ol>
             </div>

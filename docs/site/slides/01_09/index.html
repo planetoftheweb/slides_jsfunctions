@@ -86,11 +86,11 @@
                     </a>
                   </div>
                 
-                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 " style="--bs-bg-opacity: .5;">
-                    <a class="text-decoration-none link-dark " href="../01_09/index.html">
-                      <i class="fas fa-file-alt me-2 lh-1  text-secondary "></i>
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-dark " style="--bs-bg-opacity: .5;">
+                    <a class="text-decoration-none link-dark  text-light link-light " href="../01_09/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-light "></i>
                       01_09</a>
-                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_09&#">
+                    <a class=" link-light  flex-fill ms-3 text-end" href="../../../?d=01_09&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
@@ -98,20 +98,32 @@
           </aside>
         <main class="main col col-md-6 col-lg-8">
           <!-- .slide: data-state="layout-title" class="bg-dark"-->
-<h1 id="slides" tabindex="-1">Slides <a class="direct-link" href="#slides"> </a></h1>
-<div class="slide-link"><a href="https://go.raybo.org/2OXU"><i class="fab fa-slideshare"></i> go.raybo.org/2OXU</a></div>
-<blockquote>
-<blockquote></blockquote>
-</blockquote>
-<p>You can find all of the slides for this course at this URL.</p>
+<h1 id="solution" tabindex="-1">Solution <a class="direct-link" href="#solution"> </a></h1>
 <hr>
-<h1 id="slides-1" tabindex="-1">Slides <a class="direct-link" href="#slides-1"> </a></h1>
+<!-- .slide: data-state="layout-title" class="bg-dark"-->
+<h1 id="solution-1" tabindex="-1">Solution <a class="direct-link" href="#solution-1"> </a></h1>
+<ol>
+<li>Given previous object</li>
+<li>Standalone function</li>
+<li>Object as input</li>
+<li>key/value list</li>
+<li>Insert into DOM</li>
+</ol>
+<p><a href="https://github.dev/LinkedInLearning/javascript-functions-2502735/tree/01_09" target="_blank"><code class="code-royal">Solution</code></a></p>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>The basic instructions for how to work with the slideshow are right here.</p>
-<p>If you see a slideshow in a video, you can find that slideshow by going to the toolbar and choosing the proper video.</p>
-<p>You can hit the M key to see the toolbar and then pick one of the videos for the course. If you want to watch the slides for the third video in the first chapter, then you'd pick this slideshow from the list.</p>
+<p>Create function that takes an object as an input and creates a list in the DOM out of the Object's key/value pairs.</p>
+<pre><code class="language-js">function listObject(data) {
+  const $ = document.querySelector.bind(document)
+  let output = '&lt;ul&gt;'
+  for (const key in data) {
+    output+=`&lt;li&gt;&lt;a href=&quot;${data[key]}&quot;&gt;${key}&lt;/a&gt;&lt;/li&gt;`
+  }
+  output +='&lt;/ul&gt;'
+  $('#output').innerHTML = output
+}
+</code></pre>
 
         </main>
         <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
@@ -120,10 +132,10 @@
             <div class="">
                 <ol>
                     
-                    <li><a href="#slides">Slides</a>
+                    <li><a href="#solution">Solution</a>
             		</li>
 
-                    <li><a href="#slides-1">Slides</a>
+                    <li><a href="#solution-1">Solution</a>
             		</li>
                 </ol>
             </div>
