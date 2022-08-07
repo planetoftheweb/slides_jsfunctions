@@ -46,4 +46,7 @@
 ,{
     "filename": "02_03",
     "title": "Modules" }
+,{
+    "filename": "02_04",
+    "title": "Closures" }
 ]
