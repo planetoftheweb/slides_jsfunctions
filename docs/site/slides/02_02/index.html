@@ -112,6 +112,15 @@
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 " style="--bs-bg-opacity: .5;">
+                    <a class="text-decoration-none link-dark " href="../02_03/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-secondary "></i>
+                      02_03</a>
+                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=02_03&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
                 </nav>
           </aside>
         <main class="main col col-md-6 col-lg-8">
@@ -159,20 +168,22 @@ firstDog.speak('woof')
 <p>JavaScript objects have a special property called the prototype. If you've visited online documentation, you may have seen this keyword.</p>
 <p>This feature allows all objects to be extended. When we create our Dog class, we can target the prototype and add any number of features to that class. In this case, we're adding a speak function.</p>
 <hr>
-<h1 id="the-prototype-1" tabindex="-1">The Prototype <a class="direct-link" href="#the-prototype-1"> </a></h1>
-<pre><code class="language-js">let Dog = function() {
+<h1 id="separate-function" tabindex="-1">Separate Function <a class="direct-link" href="#separate-function"> </a></h1>
+<pre><code class="language-js">let speak = function(what) {
+  return (console.log(what));
+}
+  
+let Dog = function() {
   let name;
 }
-Dog.prototype = {
-  speak: function(what) {
-    return (console.log(what));
-  }
-}
+
+Dog.prototype.speak = speak
 let myDog = new Dog;
+
 myDog.name = &quot;Mojo&quot;
 myDog.speak('woof')
 </code></pre>
-<p><a href="https://github.dev/LinkedInLearning/javascript-functions-2502735/tree/02_02zb" target="_blank"><code class="code-royal">Try It</code></a></p>
+<p><a href="https://github.dev/LinkedInLearning/javascript-functions-2502735/tree/02_02b" target="_blank"><code class="code-royal">Try It</code></a></p>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
@@ -196,7 +207,7 @@ myDog.speak('woof')
                     <li><a href="#the-prototype">The Prototype</a>
             		</li>
 
-                    <li><a href="#the-prototype-1">The Prototype</a>
+                    <li><a href="#separate-function">Separate Function</a>
             		</li>
                 </ol>
             </div>

@@ -1,39 +1,39 @@
 [{
     "filename": "00_01",
-    "title": "" }
+    "title": "JavaScript Functions" }
 ,{
     "filename": "00_03",
-    "title": "" }
+    "title": "Slides" }
 ,{
     "filename": "01_01",
-    "title": "" }
+    "title": "CodeSwing" }
 ,{
     "filename": "01_02",
-    "title": "" }
+    "title": "Mechanics of Functions" }
 ,{
     "filename": "01_03",
-    "title": "" }
+    "title": "Definition Expressions" }
 ,{
     "filename": "01_04",
-    "title": "" }
+    "title": "Parameters" }
 ,{
     "filename": "01_05",
-    "title": "" }
+    "title": "Hoisting and Scope" }
 ,{
     "filename": "01_06",
-    "title": "" }
+    "title": "Methods" }
 ,{
     "filename": "01_07",
-    "title": "" }
+    "title": "Return" }
 ,{
     "filename": "01_08",
-    "title": "" }
+    "title": "Challenge" }
 ,{
     "filename": "01_09",
-    "title": "" }
+    "title": "Solution" }
 ,{
     "filename": "02_01",
-    "title": "" }
+    "title": "Arrow Functions" }
 ,{
     "filename": "demo",
     "title": "Opinionated Reveal.js" }
@@ -42,5 +42,8 @@
     "title": "" }
 ,{
     "filename": "02_02",
-    "title": "" }
+    "title": "Constructors" }
+,{
+    "filename": "02_03",
+    "title": "Modules" }
 ]
