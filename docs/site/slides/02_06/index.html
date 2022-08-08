@@ -59,11 +59,11 @@
                     </a>
                   </div>
                 
-                  <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-dark " style="--bs-bg-opacity: .5;">
-                    <a class="text-decoration-none link-dark  text-light link-light " href="../01_06/index.html">
-                      <i class="fas fa-file-alt me-2 lh-1  text-light "></i>
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 " style="--bs-bg-opacity: .5;">
+                    <a class="text-decoration-none link-dark " href="../01_06/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-secondary "></i>
                       01_06</a>
-                    <a class=" link-light  flex-fill ms-3 text-end" href="../../../?d=01_06&#">
+                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_06&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
@@ -140,11 +140,11 @@
                     </a>
                   </div>
                 
-                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 " style="--bs-bg-opacity: .5;">
-                    <a class="text-decoration-none link-dark " href="../02_06/index.html">
-                      <i class="fas fa-file-alt me-2 lh-1  text-secondary "></i>
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-dark " style="--bs-bg-opacity: .5;">
+                    <a class="text-decoration-none link-dark  text-light link-light " href="../02_06/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-light "></i>
                       02_06</a>
-                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=02_06&#">
+                    <a class=" link-light  flex-fill ms-3 text-end" href="../../../?d=02_06&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
@@ -152,102 +152,94 @@
           </aside>
         <main class="main col col-md-6 col-lg-8">
           <!-- .slide: data-state="layout-title" class="bg-dark"-->
-<h1 id="methods" tabindex="-1">Methods <a class="direct-link" href="#methods"> </a></h1>
-<div class="slide-link"><a href="https://go.raybo.org/9Xxu"><i class="fab fa-slideshare"></i> go.raybo.org/9Xxu</a></div>
+<h1 id="asynchronous-functions" tabindex="-1">Asynchronous Functions <a class="direct-link" href="#asynchronous-functions"> </a></h1>
+<div class="slide-link"><a href="https://go.raybo.org/9eeT"><i class="fab fa-slideshare"></i> go.raybo.org/9eeT</a></div>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>There's another way that JavaScript functions can be invoked...and that's through methods.</p>
+<p>There's a way in which we can create functions that wait for certain things to happen.</p>
 <hr>
-<h1 id="objects" tabindex="-1">Objects <a class="direct-link" href="#objects"> </a></h1>
-<pre><code class="language-js">info = {
-  social: {
-    youtube: 'https://youtube.com/planetoftheweb',
-    linkedin: 'https://linkedin.com/in/planetoftheweb',
-    blog: 'https://raybo.org'
-  }
-}
-</code></pre>
+<h1 id="async%2Fawait" tabindex="-1">Async/Await <a class="direct-link" href="#async%2Fawait"> </a></h1>
 <ul>
-<li>The object type</li>
-<li>Function in object</li>
+<li>Async identifies</li>
+<li>Await waits</li>
+<li>Promises</li>
 </ul>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>An object is the most flexible data types in JavaScript and they can hold many types of values including functions.</p>
-<p>So a method is just a function that has been assigned as a property of an object. Let's take a look at how you define one.</p>
+<p>One of the things that used to be real difficult with functions is guaranteing that they ran only when something else happened. That has been simplified by allowing two special keywords called Async and Await.</p>
+<p>Adding the Async keyword to a function identifies that function as something that has the capacity to handle this feature.</p>
+<p>The keyword await defines a spot that stops the execution of a function until something else happens.</p>
+<p>These functions work when what's controlling the flow happen to be something called a promise.</p>
 <hr>
-<h1 id="creating-a-method" tabindex="-1">Creating a Method <a class="direct-link" href="#creating-a-method"> </a></h1>
-<pre><code class="language-js">info = {
-  social: {...},
-  logSocial: function(data) {
-    console.log(`${data.youtube}
-        ${data.linkedin}
-        ${data.blog}`
-    )
-  }
+<h1 id="async" tabindex="-1">Async <a class="direct-link" href="#async"> </a></h1>
+<pre><code class="language-js">async function doIt() {
+    return console.log(&quot;I'm doing it&quot;);
 }
-info.logSocial(info.social);
+doIt().then( item =&gt; {
+  console.log('Glad you did it!')  
+})
 </code></pre>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Assuming that the info object is created as in the previous slide, we can write a function...which is called a method when it's part of an object that logs the value of the different links.</p>
-<p>We call the method as part of the object, but it now will perform an action.</p>
+<p>The Async keywork lets you define a function as being asynchronous. Something that can manage time.</p>
+<p>An Async function like this will return a promise.</p>
+<p>So we can call it and do something when that function resolves as being complete.</p>
 <hr>
-<h1 id="the-this-keyword" tabindex="-1">The <em>this</em> Keyword <a class="direct-link" href="#the-this-keyword"> </a></h1>
-<ul>
-<li>Object executing code
-<ul>
-<li>Function: global</li>
-<li>Object: object</li>
-</ul>
-</li>
-</ul>
+<h1 id="await" tabindex="-1">Await <a class="direct-link" href="#await"> </a></h1>
+<pre><code class="language-js">async function prep() {
+    return console.log('Preparing')
+}
+async function doIt() {
+    await prep()
+    return console.log(&quot;I'm doing it&quot;)
+}
+doIt();
+</code></pre>
+<p>The other part of defining an async function is that we can use await with it...stopping the execution of code until something else takes place.</p>
+<p>The thing you're waiting for needs to return some type of promise, so you can see here that we've created a prep function that's also an asynchronous function.</p>
+<hr>
+<h1 id="error-handling" tabindex="-1">Error Handling <a class="direct-link" href="#error-handling"> </a></h1>
+<pre><code class="language-js">async function prep() {
+  	throw new Error(&quot;Not Possible&quot;);
+}
+async function doIt() {
+  try {
+    await prep()
+    console.log(&quot;I'm doing it&quot;)
+  } catch(error) {
+    console.log(error)
+  }
+}
+doIt();
+</code></pre>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>You can use a special keyword in JavaScript called this.</p>
-<p>It refers to the object that is executing the current piece of code.</p>
-<p>If you're using this in a regular function, this references the global object.</p>
-<p>If you use the this keyword inside a method then it references the object itself.</p>
+<p>So, what happens if there is an error?</p>
+<p>You can use the try/catch statements to take care of any errors.</p>
+<p>Here, I'm throwing an error on purpose, but promises have a system for sending errors if something you're doing is not working.</p>
 <hr>
-<h1 id="using-this-keyword" tabindex="-1">Using <em>this</em> Keyword <a class="direct-link" href="#using-this-keyword"> </a></h1>
-<pre><code class="language-js">info = {
-  social: {...},
-  logSocial: function() {
-    console.log(`${this.social.youtube}
-        ${this.social.linkedin}
-        ${this.social.blog}`
-    )
-  }
+<h1 id="fetching" tabindex="-1">Fetching <a class="direct-link" href="#fetching"> </a></h1>
+<pre><code class="language-js">async function getSocial() {
+    const res = await fetch('./social.json')
+    const data = await res.json();
+    return data;
 }
-info.logSocial();
 </code></pre>
-<p><a href="https://github.dev/LinkedInLearning/javascript-functions-2502735/tree/01_06b" target="_blank"><code class="code-royal">Try it</code></a></p>
+<p><a href="https://github.dev/LinkedInLearning/javascript-functions-2502735/tree/02_06b" target="_blank"><code class="code-royal">Try It</code></a></p>
+<p><a href="https://www.linkedin.com/learning/javascript-as-a-second-language/introduction?autoplay=true&u=104" target="_blank"><code class="code-primary">More Info</code></a></p>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>That means that we can rewrite our methods using the this keyword, which references the object.</p>
-<p>Let's try this out in CodeSpaces and we'll do a bit of a better job logging our project.</p>
-<pre><code class="language-js">info = {
-  social: {
-    youtube: 'https://youtube.com/planetoftheweb',
-    linkedin: 'https://linkedin.com/in/planetoftheweb',
-    blog: 'https://raybo.org'
-  },
-  logSocial: function() {
-    for (const key in this.social) {
-        console.log(`${key}: ${this.social[key]}`);
-    }
-  }
-}
-info.logSocial();
-</code></pre>
-<p>Functions as objects is one of the most useful JavaScript features. You use them all the time, sometimes without even knowing it.</p>
-<p>Can you guess which method we've been using extensively in these lessons?</p>
-<p>Yep...the console log statemewnt is a method that outputs a message to the web console. Now that you know how to build them, you'll probably notice all types of other methods.</p>
+<p>A good example of something you will use async and await for is the fetch API. Fetch is a function that returns a promise and reads some data either from a file or an external source.</p>
+<p>It's perfect because retrieving data is often something that requires you to make sure you don't start doing things before that function is done.</p>
+<p>As a matter of fact, reading the file is not enough, you also need to be able to wait for the data to be read and them convert that data into a javaScript Object from a JSON file.</p>
+<p>Let's take a look at how that works.</p>
+<p>As I said, to really understand how Async and Await works, it's a good idea to understand both the try/catch statements as well as promises, which are the precursor to these statements.</p>
+<p>If you want to learn more about those, check out my other course JavaScript as a Second Language where I cover those in a lot more detail.</p>
 
         </main>
         <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
@@ -256,19 +248,22 @@ info.logSocial();
             <div class="">
                 <ol>
                     
-                    <li><a href="#methods">Methods</a>
+                    <li><a href="#asynchronous-functions">Asynchronous Functions</a>
             		</li>
 
-                    <li><a href="#objects">Objects</a>
+                    <li><a href="#async%2Fawait">Async/Await</a>
             		</li>
 
-                    <li><a href="#creating-a-method">Creating a Method</a>
+                    <li><a href="#async">Async</a>
             		</li>
 
-                    <li><a href="#the-this-keyword">The this Keyword</a>
+                    <li><a href="#await">Await</a>
             		</li>
 
-                    <li><a href="#using-this-keyword">Using this Keyword</a>
+                    <li><a href="#error-handling">Error Handling</a>
+            		</li>
+
+                    <li><a href="#fetching">Fetching</a>
             		</li>
                 </ol>
             </div>

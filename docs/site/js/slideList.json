@@ -52,4 +52,7 @@
 ,{
     "filename": "02_05",
     "title": "Recursion" }
+,{
+    "filename": "02_06",
+    "title": "Asynchronous Functions" }
 ]
