@@ -3,6 +3,7 @@ import 'animate.css/animate.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import './css/twemoji-amazing.css'
 import Menu from './site/js/slideList.json'
+console.log(Menu);
 
 //Highlight.js
 import hljs from 'highlight.js'
