@@ -35,12 +35,6 @@
     "filename": "02_01",
     "title": "Arrow Functions" }
 ,{
-    "filename": "demo",
-    "title": "Opinionated Reveal.js" }
-,{
-    "filename": "slides",
-    "title": "" }
-,{
     "filename": "02_02",
     "title": "Constructors" }
 ,{
@@ -58,4 +52,10 @@
 ,{
     "filename": "02_07",
     "title": "Challenge" }
+,{
+    "filename": "demo",
+    "title": "Opinionated Reveal.js" }
+,{
+    "filename": "slides",
+    "title": "" }
 ]
