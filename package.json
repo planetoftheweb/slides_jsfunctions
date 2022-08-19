@@ -12,8 +12,8 @@
     "build": "run-s prod:*",
     "prod:del": "rimraf docs",
     "prod:serve": "ELEVENTY_ENV=production eleventy --output=./docs/site",
-    "prod:vite": "vite build --outDir=../docs --base=/slides_jsfunctions/",
     "prod:copyJS": "copyfiles -u 2 /docs/site/slideList.json ./js/slideList.json",
+    "prod:vite": "vite build --outDir=../docs --base=/slides_jsfunctions/",
     "prod:copy": "copyfiles -u 2 ./src/slides/*.md ./docs/slides"
   },
   "devDependencies": {
