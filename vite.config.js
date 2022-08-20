@@ -9,6 +9,9 @@ export default {
     {
       name: "reload",
       configureServer(server) {
+        // To get it to reload slides
+        // ask the server to reload the server
+        // if a markdown file changes
         const { ws, watcher } = server;
         watcher.on("change", (file) => {
           if (file.endsWith(".md")) {
