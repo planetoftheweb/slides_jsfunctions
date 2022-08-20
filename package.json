@@ -6,7 +6,7 @@
   "version": "2.0.0",
   "scripts": {
     "serve": "vite preview",
-    "start": "npm-run-all --parallel dev:*",
+    "start": "run-s dev:*",
     "dev:vite": "vite",
     "dev:eleventy": "eleventy --watch",
     "build": "run-s prod:*",
