@@ -1,0 +1,61 @@
+[{
+    "filename": "00_01",
+    "title": "JavaScript Functions" }
+,{
+    "filename": "00_03",
+    "title": "Slides" }
+,{
+    "filename": "01_01",
+    "title": "CodeSwing" }
+,{
+    "filename": "01_02",
+    "title": "Mechanics of Functions" }
+,{
+    "filename": "01_03",
+    "title": "Definition Expressions" }
+,{
+    "filename": "01_04",
+    "title": "Parameters" }
+,{
+    "filename": "01_05",
+    "title": "Hoisting and Scope" }
+,{
+    "filename": "01_06",
+    "title": "Methods" }
+,{
+    "filename": "01_07",
+    "title": "Return" }
+,{
+    "filename": "01_08",
+    "title": "Challenge" }
+,{
+    "filename": "01_09",
+    "title": "Solution" }
+,{
+    "filename": "02_01",
+    "title": "Arrow Functions" }
+,{
+    "filename": "02_02",
+    "title": "Constructors" }
+,{
+    "filename": "02_03",
+    "title": "Modules" }
+,{
+    "filename": "02_04",
+    "title": "Closures" }
+,{
+    "filename": "02_05",
+    "title": "Recursion" }
+,{
+    "filename": "02_06",
+    "title": "Asynchronous Functions" }
+,{
+    "filename": "02_07",
+    "title": "Challenge" }
+,{
+    "filename": "demo",
+    "title": "Opinionated Reveal.js" }
+,{
+    "filename": "slides",
+    "title": "" }
+]
