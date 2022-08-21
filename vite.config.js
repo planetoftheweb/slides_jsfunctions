@@ -9,8 +9,8 @@ export default {
     {
       name: "reload",
       configureServer(server) {
-        // To get it to reload slides
-        // ask the server to reload the server
+        // To reload slides
+        // ask the server to reload
         // if a markdown file changes
         const { ws, watcher } = server;
         watcher.on("change", (file) => {

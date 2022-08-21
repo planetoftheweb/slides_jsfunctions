@@ -5,4 +5,4 @@ dist-ssr
 *.local
 public
 docs
-**/*-todo.md
+**/*todo.md
