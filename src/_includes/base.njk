@@ -70,6 +70,7 @@
             <nav class="sticky-top fw-medium lh-sm pt-2 ">
               <h3 class="text-secondary ms-2">Documents</h3>
               {%- for item in collections.slides | sortBySlugs -%}
+                {# TODO: Fix filtering so I can just match a pattern #}
                 {% if (item.fileSlug !== 'demo' and item.fileSlug !== '00_01' and item.fileSlug !== '00_02' and item.fileSlug !== '00_03' and item.fileSlug !== 'slides') %}
                   <div class="d-flex justify-content-end align-items-right border-bottom p-2" {% if page.fileSlug  == item.fileSlug %} style="background-color: #DC9F04" {% else %} style="background-color:#F0C051;"{% endif %}>
                     <a class="text-decoration-none d-flex {% if page.fileSlug  == item.fileSlug %} text-light link-light {% endif %}" href="../{{ item.fileSlug | safe }}/index.html">
