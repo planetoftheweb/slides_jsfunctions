@@ -7,12 +7,11 @@
   "scripts": {
     "serve": "vite preview",
     "start": "run-s dev:*",
+    "dev:eleventy": "npx @11ty/eleventy --watch",
     "dev:vite": "vite",
-    "dev:eleventy": "eleventy --watch",
     "build": "run-s prod:*",
     "prod:del": "rimraf docs",
-    "prod:serve": "ELEVENTY_ENV=production eleventy --output=./docs/site",
-    "prod:copyJS": "copyfiles -u 2 /docs/site/slideList.json ./site/js/slideList.json",
+    "prod:serve": "npx @11ty/eleventy",
     "prod:vite": "vite build --outDir=../docs --base=./",
     "prod:copy": "copyfiles -u 2 ./src/slides/*.md ./docs/slides",
     "prod:nojekyll": "touch ./docs/.nojekyll"
