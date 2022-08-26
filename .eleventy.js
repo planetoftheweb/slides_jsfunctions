@@ -39,7 +39,7 @@ module.exports = function (eleventyConfig) {
   }
   let opts = {
     class: 'direct-link',
-    symbol: '#'
+    symbol: ' '
   }
 
   eleventyConfig.setLibrary('md', markdownIt(options).use(markdownItAnchor, opts))

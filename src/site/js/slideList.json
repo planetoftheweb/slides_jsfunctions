@@ -5,9 +5,6 @@
     "filename": "00_03",
     "title": "Slides" }
 ,{
-    "filename": "01_01",
-    "title": "CodeSwing" }
-,{
     "filename": "01_02",
     "title": "Mechanics of Functions" }
 ,{
@@ -58,4 +55,7 @@
 ,{
     "filename": "slides",
     "title": "" }
+,{
+    "filename": "01_01",
+    "title": "CodeSwing" }
 ]
